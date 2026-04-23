@@ -4,6 +4,10 @@ export const FormulaireConnexion = () => {
 
     const Navigate = useNavigate()
 
+    const switchToInscription = () => {
+        Navigate("/inscription")
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault()
 
@@ -14,7 +18,7 @@ export const FormulaireConnexion = () => {
             "pwd" : target.pwd.value
         }
 
-        let API_CALL = await fetch("http://localhost:7000/auth/inscription", {
+        let API_CALL = await fetch("http://localhost:7000/auth/connexion", {
             method: "POST",
             headers : {
                 "Accept" : "application/json",
@@ -25,17 +29,20 @@ export const FormulaireConnexion = () => {
 
         let data = await API_CALL.json();
 
+        const userData = data.user
+
         localStorage.setItem("user", JSON.stringify({
-            username : json_data.username,
-            mail : json_data.mail
-        }));
+            is_connected : true,
+            username: userData.username,
+            mail : userData.mail
+        }))
 
         if (data.success) Navigate("/home")
 
     }
 
     return(
-        <div id="formulaire-inscription">
+        <div id="formulaire-auth">
             <h2>CONNEXION</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="">E-mail</label>
@@ -43,6 +50,8 @@ export const FormulaireConnexion = () => {
                 <label htmlFor="">Mot de passe</label>
                 <input type="password" name="pwd"/>
                 <button type="submit">CONNEXION</button>
+                <p>Vous n'avez pas de compte ?</p>
+                <p onClick={switchToInscription} id="btn-already-account">Inscription</p>
             </form>
         </div>
     )

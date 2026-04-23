@@ -3,6 +3,7 @@ import { HomeNotConnected } from "./page/HomeNotConnected";
 import { Inscription } from "./page/Inscription";
 import { Home } from "./page/Home";
 import { Connexion } from "./page/Connexion";
+import "./style/Css/style.css"
 
 const router = createBrowserRouter([
   {

@@ -1,3 +1,3 @@
 export const Background = () => {
-    return <img src={require("../assets/image/background_not_connected.png")} alt="" />
+    return <img id="background-img" src={require("../assets/image/earth.jpg")} alt="" />
 }

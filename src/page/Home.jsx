@@ -1,3 +1,8 @@
+import { Background } from "../components/background"
+import { User } from "../components/home/user"
+import { NavBar } from "../components/navBar"
+import { Title } from "../components/Title"
+
 export const Home = () => {
 
     const user = JSON.parse(localStorage.getItem("user"))
@@ -6,8 +11,13 @@ export const Home = () => {
     console.log(user.mail)
 
     return(
-        <div>
-            <h1>{user.username}</h1>
+        <div id="home-connected">
+            <Background/>
+            <div id="header">
+                <Title/>
+                <User/>
+            </div>
+            <NavBar/>
         </div>
     )
 }

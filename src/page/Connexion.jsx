@@ -4,10 +4,14 @@ import { Title } from "../components/Title";
 
 export const Connexion = () => {
   return (
-    <div id="Inscription">
-      <Background />
-      <Title/>
-      <FormulaireConnexion/>
-    </div>
+    <div id="auth">
+          <div id="image-container-auth">
+            <Background />
+          </div>
+          <div id="form-container-auth">
+            <Title />
+            <FormulaireConnexion />
+          </div>
+        </div>
   );
 };

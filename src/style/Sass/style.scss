@@ -1,0 +1,285 @@
+@font-face {
+    font-family: 'Grotesk';
+    src: url(../../assets/font/Grotesk.ttf);
+}
+
+$text-color : #DDE7F1;
+$deep-blue : #001338;
+$ocean-bue : #4E76B1;
+
+* {
+    margin: 0;
+}
+
+
+#background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(2px);
+    z-index: 0;
+}
+
+.active{
+    background-color: $ocean-bue !important;
+    border-color: $ocean-bue !important;
+}
+
+#Home-not-connected {
+    display: flex;
+
+    #title {
+        position: relative;
+        font-family: 'Grotesk';
+        z-index: 2;
+        color: $text-color;
+        padding-top: 32px;
+        padding-left: 32px;
+        font-weight: bold;
+        font-size: 48px;
+        font-style: italic;
+    }
+
+    #btn-not-connected {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        padding-top: 32px;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 48px;
+        gap: 32px;
+        color: $text-color;
+
+        .btn {
+            font-family: 'Grotesk';
+            font-weight: 400;
+            cursor: pointer;
+            font-size: 20px;
+
+            &:hover {
+                color: rgb(255, 198, 93);
+                transition: .25s;
+            }
+        }
+    }
+
+    #text-home-not-connected {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            position: relative;
+            z-index: 1;
+            color: $text-color;
+            font-size: 64px;
+            font-family: 'Grotesk';
+            width: 33%;
+            text-align: center;
+        }
+
+        p {
+            position: relative;
+            z-index: 1;
+            color: $text-color;
+            font-size: 16px;
+            font-family: 'Grotesk';
+            margin-top: 16px;
+            width: 50%;
+            text-align: center;
+        }
+
+        b {
+            position: relative;
+            z-index: 1;
+            color: $text-color;
+            font-size: 16px;
+            font-family: 'Grotesk';
+            margin-top: 8px;
+        }
+    }
+}
+
+#auth {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    #image-container-auth {
+        width: 66%;
+    }
+
+    #background-img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        filter: blur(1px);
+    }
+
+    #form-container-auth {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #title {
+        color: $deep-blue;
+        font-size: 36px;
+        margin: 0;
+        text-align: center;
+        font-style: italic;
+        font-family: 'Grotesk';
+    }
+
+    #formulaire-auth {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-top: 18px;
+                font-family: 'grotesk';
+                font-weight: bold;
+                color: $deep-blue;
+                padding-bottom: 4px;
+            }
+
+            input {
+                width: 100%;
+                padding: 8px;
+                background: $ocean-bue;
+                color: $text-color;
+                font-family: 'Grotesk';
+                font-weight: bold;
+                border: none;
+            }
+
+            button {
+                margin-top: 32px;
+                background-color: $deep-blue;
+                font-size: 20px;
+                border-color: $deep-blue;
+                font-weight: bold;
+                font-family: 'Grotesk';
+                color: white;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    background: transparent;
+                    color: $deep-blue;
+                    transition: .25s;
+                }
+            }
+        }
+    }
+
+    h2 {
+        color: $deep-blue;
+        font-size: 24px;
+        text-align: center;
+        font-family: 'Grotesk';
+    }
+
+    p {
+        font-weight: 'Grotesk';
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    #btn-already-account {
+        color: $ocean-bue;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+}
+
+#home-connected {
+
+    #header{
+        width: 100vw;
+        height: 15vh;
+        display: flex;
+        align-items: center;
+    }
+
+    #title {
+        position: relative;
+        font-family: 'Grotesk';
+        z-index: 2;
+        color: $text-color;
+        padding-left: 32px;
+        font-weight: bold;
+        font-size: 48px;
+        font-style: italic;
+    }
+
+    #user-username{
+        position: relative;
+        z-index: 1;
+        color: $text-color;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-left: auto;
+        margin-right: 128px;
+        cursor: pointer;
+    }
+
+    #navigation-bar{
+        position: sticky;
+        z-index: 1;
+        color: $text-color;
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgba(255,255,255, .33);
+        border-radius: 20px;
+        padding-left: 18px;
+        padding-right: 18px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        .navigate{
+            text-decoration: none;
+            color : $text-color;
+            background-color: $deep-blue;
+            padding: 12px;
+            border-radius: 18.5px;
+            width: 25%;
+            text-align: center;
+            font-family: 'Grotesk';
+            border: 1px solid $deep-blue;
+            font-size: 14px;
+
+            &:hover{
+                background: transparent;
+                border-color: white;
+                transition: .25s;
+            }
+        }
+        
+    }
+
+}
